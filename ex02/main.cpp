@@ -1,5 +1,7 @@
 #include <iostream>
-#include <Array.hpp>
+#include <cstdlib>
+
+#include "Array.hpp"
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -33,7 +35,8 @@ int main(int, char**)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
+		std::cerr << "Index out of bounds" << std::endl;
     }
     try
     {
@@ -41,7 +44,8 @@ int main(int, char**)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
+		std::cerr << "Index out of bounds" << std::endl;
     }
 
     for (int i = 0; i < MAX_VAL; i++)
